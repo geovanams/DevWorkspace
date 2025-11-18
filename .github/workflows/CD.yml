@@ -48,7 +48,6 @@ jobs:
     # Only deploy to Dev if Controllers or Models changed
     if: |
       needs.changes.outputs.Consumo == 'true'
-      name: 'consumo'
 
     steps:
       - name: executing consumo deployment pipeline
@@ -62,7 +61,6 @@ jobs:
     # Only deploy to Dev if Controllers or Models changed
     if: |
       needs.changes.outputs.semantica == 'true'
-      name: 'semantica'
 
     steps:
       - name: executing semanica deployment pipeline
@@ -76,7 +74,6 @@ jobs:
     # Only deploy to Dev if Controllers or Models changed
     if: |
       needs.changes.outputs.pipeline == 'true'
-      name: 'pipeline'
 
     steps:
       - name: executing pipeline deployment pipeline
